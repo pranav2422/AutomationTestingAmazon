@@ -29,7 +29,7 @@ public class LogoutEvent {
 		String actualtitle = BaseTest.driver.getTitle();
 		
 		Assert.assertEquals(expectedtitle, actualtitle);
-		BaseTest.logger.info("Logout successful");
+		BaseTest.logger.info("Logout successfuly");
 
 	}
 
