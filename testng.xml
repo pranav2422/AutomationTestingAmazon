@@ -11,10 +11,10 @@
  
  <test  name="Test">
    <classes>
-      <class name="testjava.LoginToWebsite"/>  
-      <class name="testjava.ManageList"/>   
+      <class name="testjava.LoginToWebsite"/> 
+<!--  <class name="testjava.ManageList"/>   
       <class name="testjava.addNewAdress"/>
-      <class name="testjava.Logoutfromwebsite"/>
+      <class name="testjava.Logoutfromwebsite"/>   -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

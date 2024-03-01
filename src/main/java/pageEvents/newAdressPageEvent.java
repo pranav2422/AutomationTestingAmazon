@@ -13,7 +13,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import pageobject.ManageListElement;
 import pageobject.newAdressPageElement;
-import testjava.BaseTest;
 import utils.ElementsFetch;
 
 public class newAdressPageEvent {
@@ -25,12 +24,12 @@ public class newAdressPageEvent {
 	    a.getWebElement("XPATH", newAdressPageElement.All).click();
 	    
 	    WebElement move = a.getWebElement("XPATH", newAdressPageElement.block);
-	    Actions act = new Actions(BaseTest.driver);
+	    Actions act = new Actions(BaseTest.BaseTest.driver);
 	    act.moveToElement(move).build().perform();
 	    
 	    a.getWebElement("XPATH", newAdressPageElement.youracc).click();
 	    a.getWebElement("XPATH", newAdressPageElement.youradd).click();
-	    BaseTest.logger.info("land on adress page");
+	    BaseTest.BaseTest.logger.info("land on adress page");
 }
 	
 	public void addNewadresdel() throws IOException {
@@ -73,7 +72,7 @@ public class newAdressPageEvent {
 		
 		if(nowaddresscount>orignaladdresscount) {
 			System.out.println("adress added no of add : "+nowaddresscount);
-			BaseTest.logger.info("adress added succesfully");
+			BaseTest.BaseTest.logger.info("adress added succesfully");
 		}		
 		
 	}
@@ -83,6 +82,6 @@ public class newAdressPageEvent {
 		ElementsFetch a4 = new ElementsFetch();
 		a4.getWebElement("XPATH", newAdressPageElement.remove).click();
 		a4.getWebElement("XPATH", newAdressPageElement.confirmdelete).click();	
-		BaseTest.logger.info("adress remove succesfully");
+		BaseTest.BaseTest.logger.info("adress remove succesfully");
 	}
 }

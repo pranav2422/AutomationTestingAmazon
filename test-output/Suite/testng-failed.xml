@@ -7,17 +7,17 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testjava.addNewAdress">
+      <class name="testjava.LoginToWebsite">
         <methods>
-          <include name="beforeMethods"/>
-          <include name="afterTests"/>
-          <include name="beforeeclass"/>
+          <include name="LoginToAmazon"/>
           <include name="afterrclass"/>
           <include name="beforeTests"/>
+          <include name="afterTests"/>
+          <include name="beforeMethods"/>
           <include name="afterMethods"/>
-          <include name="addNewdeliveryaddress"/>
+          <include name="beforeeclass"/>
         </methods>
-      </class> <!-- testjava.addNewAdress -->
+      </class> <!-- testjava.LoginToWebsite -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

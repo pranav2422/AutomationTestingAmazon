@@ -14,7 +14,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.ITestAnnotation;
 
-import testjava.BaseTest;
 
 public class SuiteListeners implements ITestListener, IAnnotationTransformer {
 	
@@ -35,7 +34,7 @@ public class SuiteListeners implements ITestListener, IAnnotationTransformer {
 	public void onTestFailure(ITestResult result) {
 		System.out.println(++i +" failiiing");
 	//	String fileName = "src/screenshot" + result.getMethod().getMethodName();
-		File f = ((TakesScreenshot) BaseTest.driver).getScreenshotAs(OutputType.FILE);
+		File f = ((TakesScreenshot) BaseTest.BaseTest.driver).getScreenshotAs(OutputType.FILE);
 		
 		try {
 			FileUtils.copyFile(f, new File(".//Screenshots//screenshotttt.png"));

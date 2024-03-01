@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import pageEvents.ManageListEvents;
 
-public class ManageList extends BaseTest{
+public class ManageList extends BaseTest.BaseTest{
 	
 	@Test(priority = 1)
 	public void createListaaa() {

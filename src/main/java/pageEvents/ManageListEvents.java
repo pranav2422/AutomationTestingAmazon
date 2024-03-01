@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobject.ManageListElement;
-import testjava.BaseTest;
 import utils.ElementsFetch;
 
 public class ManageListEvents {
@@ -18,7 +17,7 @@ public class ManageListEvents {
 		ElementsFetch e = new ElementsFetch();
 		WebElement hover = e.getWebElement("XPATH", ManageListElement.accountAndList);
 		
-		Actions act = new Actions(BaseTest.driver);
+		Actions act = new Actions(BaseTest.BaseTest.driver);
 		act.moveToElement(hover).build().perform();
 		
 		e.getWebElement("XPATH", ManageListElement.wishLit).click();
@@ -30,7 +29,7 @@ public class ManageListEvents {
 	    listname.sendKeys("TestListss");
 	    e.getWebElement("XPATH", ManageListElement.clickoncraete).click();
 	    
-	   BaseTest.driver.navigate().refresh();
+	    BaseTest.BaseTest.driver.navigate().refresh();
 	    
 	    List<WebElement> listnamess = e.getListWebElements("XPATH", ManageListElement.alllistname);
 	    
@@ -38,7 +37,7 @@ public class ManageListEvents {
 	    	System.out.println(alln.getText());
 	    	if(alln.getText().equalsIgnoreCase("TestListss")) {
 	    		System.out.println("List got cteated");
-	    		BaseTest.logger.info("List got cteated");
+	    		BaseTest.BaseTest.logger.info("List got cteated");
 	    		alln.click();
 	    	}
 	    }
@@ -47,7 +46,7 @@ public class ManageListEvents {
 	 public void managelist() throws InterruptedException {
 		 ElementsFetch e1 = new ElementsFetch();
 		 
-		 WebDriverWait wait = new WebDriverWait(BaseTest.driver, 15);
+		 WebDriverWait wait = new WebDriverWait(BaseTest.BaseTest.driver, 15);
 		 Thread.sleep(5000);
 		 WebElement hover2 = e1.getWebElement("XPATH", ManageListElement.more);
 		 hover2.click();
@@ -72,12 +71,12 @@ public class ManageListEvents {
 		 e1.getWebElement("XPATH", ManageListElement.description).sendKeys("coooooooooooool");
 		 e1.getWebElement("XPATH", ManageListElement.savec).click();	
 		 
-		 BaseTest.logger.info("List manage successfully");
+		 BaseTest.BaseTest.logger.info("List manage successfully");
 	 }
 	 
 	 public void deletelist() throws InterruptedException {
 		 ElementsFetch e1 = new ElementsFetch();
-		 WebDriverWait wait = new WebDriverWait(BaseTest.driver, 30);
+		 WebDriverWait wait = new WebDriverWait(BaseTest.BaseTest.driver, 30);
 		 Thread.sleep(5000);
 		 WebElement hover3 = e1.getWebElement("XPATH", ManageListElement.more);
 		 hover3.click();
@@ -95,7 +94,7 @@ public class ManageListEvents {
 		 sr.click();
 		 WebElement sm = wait.until(ExpectedConditions.elementToBeClickable(e1.getWebElement("XPATH", ManageListElement.confirmdel)));
 		 sm.click();
-		 BaseTest.logger.info("List deletedd");
+		 BaseTest.BaseTest.logger.info("List deletedd");
 		 System.out.println("list deleted");
 		 
 		

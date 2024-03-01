@@ -8,7 +8,6 @@ import org.testng.Assert;
 
 import pageobject.ManageListElement;
 import pageobject.logoutelement;
-import testjava.BaseTest;
 import utils.ElementsFetch;
 
 public class LogoutEvent {
@@ -16,20 +15,20 @@ public class LogoutEvent {
 	public void logoutt()  {
 		ElementsFetch e = new ElementsFetch();
 		//BaseTest.driver.navigate().refresh();
-		WebDriverWait wait = new WebDriverWait(BaseTest.driver, 15);
+		WebDriverWait wait = new WebDriverWait(BaseTest.BaseTest.driver, 15);
 		WebElement hover2 = wait.until(ExpectedConditions.elementToBeClickable(e.getWebElement("XPATH", logoutelement.accountAndList)));
 
 		
-		Actions act = new Actions(BaseTest.driver);
+		Actions act = new Actions(BaseTest.BaseTest.driver);
 		act.moveToElement(hover2).build().perform();
 		
 		e.getWebElement("XPATH", logoutelement.signout).click();
 		
 		String expectedtitle = "Amazon Sign In";
-		String actualtitle = BaseTest.driver.getTitle();
+		String actualtitle = BaseTest.BaseTest.driver.getTitle();
 		
 		Assert.assertEquals(expectedtitle, actualtitle);
-		BaseTest.logger.info("Logout successfuly");
+		BaseTest.BaseTest.logger.info("Logout successfuly");
 
 	}
 

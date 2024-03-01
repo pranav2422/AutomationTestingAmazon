@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import pageEvents.newAdressPageEvent;
 
-public class addNewAdress extends BaseTest {
+public class addNewAdress extends BaseTest.BaseTest {
 	
 	@Test(priority = 1)
 	public void addNewdeliveryaddress() throws IOException {

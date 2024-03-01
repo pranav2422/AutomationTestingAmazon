@@ -1,6 +1,5 @@
 package pageobject;
 
-import testjava.BaseTest;
 
 public interface LoginPageElements {
   String logintext = "//h1[contains(text(),'Sign in')]";

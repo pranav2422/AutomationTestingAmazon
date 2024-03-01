@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import pageEvents.LogoutEvent;
 
-public class Logoutfromwebsite extends BaseTest{
+public class Logoutfromwebsite extends BaseTest.BaseTest{
 	
 	@Test(priority = 1)
 	public void logouttt() {

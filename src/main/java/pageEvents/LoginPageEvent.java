@@ -3,7 +3,6 @@ package pageEvents;
 import org.testng.Assert;
 
 import pageobject.LoginPageElements;
-import testjava.BaseTest;
 import utils.ElementsFetch;
 
 public class LoginPageEvent {
@@ -16,7 +15,7 @@ public class LoginPageEvent {
 	
 	public void enteremailid() {
 		ElementsFetch e1 = new ElementsFetch();
-		BaseTest.logger.info("entering email ID");
+		BaseTest.BaseTest.logger.info("entering email ID");
         e1.getWebElement("ID", LoginPageElements.emailadress).sendKeys("8805692201");
         e1.getWebElement("ID", LoginPageElements.continueaftermail).click();
 	}
@@ -29,7 +28,7 @@ public class LoginPageEvent {
 		e2.getWebElement("XPATH", LoginPageElements.signinbtn).click();
 		// to ensure you are login sucessfully
 		Assert.assertTrue(e2.getWebElement("XPATH", LoginPageElements.loginsuccess).isDisplayed(), "login failed");
-		BaseTest.logger.info("login successful");
+		BaseTest.BaseTest.logger.info("login successful");
 		
 	}
 }

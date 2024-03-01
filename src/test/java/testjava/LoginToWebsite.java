@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pageEvents.HomePageEvent;
 import pageEvents.LoginPageEvent;
 
-public class LoginToWebsite extends BaseTest {
+public class LoginToWebsite extends BaseTest.BaseTest {
   
 	@Test(priority = 1)
 	public void LoginToAmazon() {
