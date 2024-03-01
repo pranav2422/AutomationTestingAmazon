@@ -24,7 +24,7 @@ public class LoginPageEvent {
 		ElementsFetch e2 = new ElementsFetch();
 		// to ensure you are on signin page
 		Assert.assertTrue(e2.getWebElement("XPATH", LoginPageElements.enterpassword).isDisplayed(), "landed on correct page");
-		e2.getWebElement("XPATH", LoginPageElements.enterpassword).sendKeys("Pranav@24");
+		e2.getWebElement("XPATH", LoginPageElements.enterpassword).sendKeys("dummy");
 		e2.getWebElement("XPATH", LoginPageElements.signinbtn).click();
 		// to ensure you are login sucessfully
 		Assert.assertTrue(e2.getWebElement("XPATH", LoginPageElements.loginsuccess).isDisplayed(), "login failed");
